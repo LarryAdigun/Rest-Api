@@ -18,4 +18,3 @@ app.use('/api', require('./Routes/api'))
 //listen for request, if it has its own then it will listen for that [port number first
 app.listen(process.env.port || 4000, function() {
   console.log("now listening for request");
-})
