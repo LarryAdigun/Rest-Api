@@ -19,7 +19,11 @@ app.use('/api', require('./Routes/api'));
 //   console.log("GET Request");
 //   res.send({name: "Larry"})
 // })
-
+//error handling middleware
+app.use(function(err,req,res,next){
+//console.log(err)
+res.status(422).send({error:err.message})
+})
 
 
 //listen for request, if it has its own then it will listen for that [port number first
